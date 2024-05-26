@@ -287,7 +287,7 @@ theme="light"
                               ></lord-icon>
                             </span>
                             <span
-                              className="cursor-ponpm inter mx-1"
+                              className="cursor-pointer mx-1"
                               onClick={() => {
                                 deletePassword(item.id);
                               }}
