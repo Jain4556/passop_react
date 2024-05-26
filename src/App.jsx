@@ -1,4 +1,5 @@
 
+
 import Footer from './components/Footer'
 import Manager from './components/Manager'
 import Navbar from './components/Navbar'
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
     <Navbar/>
-    <div className='bg-green-200 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]'>
+    <div className="w-screen animated-background h-screen bg-gradient-to-r from-green-300 via-blue-300 to-pink-300" >
     <Manager/>
     </div>
 
