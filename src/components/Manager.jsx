@@ -272,7 +272,7 @@ theme="light"
                             </div>
                           </div>
                         </td>
-                        <td className="py-2 border border-white text-center">
+                        <td className="py-1 border border-white text-center">
                           <div className="flex justify-center items-center">
                             <span
                               className="cursor-pointer mx-1"
