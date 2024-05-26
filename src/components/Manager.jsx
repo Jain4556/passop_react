@@ -212,7 +212,7 @@ theme="light"
                       <tr key={index}>
                         <td className="py-2 border border-white text-center break-words">
                           <div className="flex flex-col items-center">
-                            <a href={item.site} target="_blank" className="break-words">
+                            <a href={item.site} target="_blank" className="truncate">
                               {item.site}
                             </a>
                             <div
@@ -234,7 +234,7 @@ theme="light"
                         </td>
                         <td className="py-2 border border-white text-center break-words">
                           <div className="flex flex-col items-center">
-                            <span className="break-words">{item.username}</span>
+                            <span>{item.username}</span>
                             <div
                               className="lordiconcopy size-7 cursor-pointer mt-2"
                               onClick={() => {
@@ -254,7 +254,7 @@ theme="light"
                         </td>
                         <td className="py-2 border border-white text-center break-words">
                           <div className="flex flex-col items-center">
-                            <span className="break-words">{"*".repeat(item.password.length)}</span>
+                            <span>{"*".repeat(item.password.length)}</span>
                             <div
                               className="lordiconcopy size-7 cursor-pointer mt-2"
                               onClick={() => {
@@ -287,7 +287,7 @@ theme="light"
                               ></lord-icon>
                             </span>
                             <span
-                              className="cursor-pointer mx-1"
+                              className="cursor-ponpm inter mx-1"
                               onClick={() => {
                                 deletePassword(item.id);
                               }}
