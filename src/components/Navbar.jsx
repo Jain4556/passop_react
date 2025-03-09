@@ -22,7 +22,7 @@ const Navbar = props => {
       </ul> */}
       <div>
         <button className='text-white bg-green-700 my-5 rounded-full flex justify-center items-center ring-white ring-1'>
-        <img className='invert w-10 py-1' src="icons/github.svg" alt="github logo" />
+        <img className='invert w-8 py-1' src="icons/github.svg" alt="github logo" />
        <span className='font-bold px-2'>  Github</span>
       </button>
       </div>

@@ -20,7 +20,7 @@ const Manager = () => {
   const copyText = (text) => {
     toast("Copied to clipboard!", {
       position: "top-right",
-      autoClose: 3000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -56,7 +56,7 @@ const Manager = () => {
       setForm({ site: "", username: "", password: "" });
       toast("Password saved!", {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -67,7 +67,7 @@ const Manager = () => {
     } else {
       toast("Error: Password not saved!", {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -88,7 +88,7 @@ const Manager = () => {
       );
       toast("Password Deleted!", {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -110,22 +110,22 @@ const Manager = () => {
 
   return (
     <>
-     <ToastContainer
-position="top-right"
-autoClose={3000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-
-/>
-      <div className="absolute inset-0 -z-10 h-full w-full bg-green-50 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
-      </div>
-      <div className="p-1 md:mycontainer min-h-[100vh] pb-16"> {/* Adjusted padding-bottom */}
+      <ToastContainer style={{marginTop: "40px"}}
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      <div className="absolute inset-0 -z-10 h-full w-full bg-green-50 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+      <div className="p-1 md:mycontainer min-h-[100vh] pb-16">
+        {" "}
+        {/* Adjusted padding-bottom */}
         <h1 className="text-4xl font-bold text-center">
           <span className="text-green-500"> &lt;</span>
           <span>Pass</span>
@@ -134,7 +134,6 @@ theme="light"
         <p className="text-green-900 text-lg text-center">
           Your own Password Manager
         </p>
-
         <div className="flex flex-col p-4 text-black gap-8 items-center">
           <input
             value={form.site}
@@ -191,7 +190,6 @@ theme="light"
             Save
           </button>
         </div>
-
         <div className="passwords">
           <h2 className="font-bold text-2xl py-4">Your Passwords</h2>
           {passwordArray.length === 0 && <div>No passwords to show</div>}
@@ -212,7 +210,11 @@ theme="light"
                       <tr key={index}>
                         <td className="py-2 border border-white text-center break-words">
                           <div className="flex flex-col items-center">
-                            <a href={item.site} target="_blank" className="truncate">
+                            <a
+                              href={item.site}
+                              target="_blank"
+                              className="truncate"
+                            >
                               {item.site}
                             </a>
                             <div
